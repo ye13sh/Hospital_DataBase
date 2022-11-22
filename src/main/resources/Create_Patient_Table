@@ -1,0 +1,7 @@
+Create Table PATIENT ( id int,
+                       name varchar(25),
+                       age int,
+                       doctor_name varchar(30),
+                       treatment varchar(50),
+                       contact int,
+                       address varchar(100));

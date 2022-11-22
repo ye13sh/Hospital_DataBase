@@ -1,0 +1,80 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>deleteDoctor</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.DeleteDoctorByIDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteDoctor</servlet-name>
+    <url-pattern>/deleteDoctor</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>deletePatient</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.DeletePatientByIDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletePatient</servlet-name>
+    <url-pattern>/deletePatient</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getDoctor</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.GetDoctorByIDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getDoctor</servlet-name>
+    <url-pattern>/getDoctor</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getPatientByID</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.GetPatientByIDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getPatientByID</servlet-name>
+    <url-pattern>/getPatientByID</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>insertDoctor</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.InsertDoctorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>insertDoctor</servlet-name>
+    <url-pattern>/insertDoctor</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>insertPatient</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.InsertPatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>insertPatient</servlet-name>
+    <url-pattern>/insertPatient</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updateDoctor</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.UpdateDoctorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateDoctor</servlet-name>
+    <url-pattern>/updateDoctor</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updatePatient</servlet-name>
+    <servlet-class>com.manipal_hospital.Servlet.UpdatePatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updatePatient</servlet-name>
+    <url-pattern>/updatePatient</url-pattern>
+  </servlet-mapping>
+
+</web-app>

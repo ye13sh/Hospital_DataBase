@@ -1,0 +1,8 @@
+Create Table DOCTOR(id int,
+                     name varchar(25) ,
+                     age int,
+                     contact varchar(12),
+                     mail varchar(25),
+                     qualification varchar(25),
+                     specialization varchar(25),
+                     address varchar(25));
