@@ -11,7 +11,7 @@ public class GetDoctorByIDService {
         repository=new GetDoctorByIDRepository();
     }
 
-    public DoctorDTO getDoctor(int id)throws DB_ERROR_Exception {
-        return repository.getDoctor(id);
+    public DoctorDTO getDoctorByID(int id)throws DB_ERROR_Exception {
+        return repository.getDoctorBtID(id);
     }
 }

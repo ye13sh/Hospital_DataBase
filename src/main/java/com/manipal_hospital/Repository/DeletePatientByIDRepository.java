@@ -17,18 +17,22 @@ public class DeletePatientByIDRepository {
     }
     public void deletePatient(int id)throws DB_ERROR_Exception {
         try{
+            System.out.println("request came to repository");
             connection= util.getConnection();
             pstmt=connection.prepareStatement(QueryConstant.Delete_Patient_query);
             pstmt.setInt(1,id);
             pstmt.executeUpdate();
+            System.out.println("successfully deleted");
 
         }catch (Exception e){
+            System.out.println(e);
             throw new DB_ERROR_Exception("Error while connecting deletePatient repository",e);
         }finally {
             try {
                 connection.close();
                 pstmt.close();
             }catch (Exception e){
+                System.out.println(e);
                 throw new DB_ERROR_Exception("Error while closing connection & pstmt",e);
             }
 

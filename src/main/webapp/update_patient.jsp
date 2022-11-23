@@ -46,7 +46,7 @@
   </form>
   <table align="center">
   <tr>
-     <td><a href="addstudent.jsp" style="margin-right: 30px">Add Student</a></td>
+     <td><a href="add_patient.jsp" style="margin-right: 30px">Add Patient</a></td>
      <td><a href="index.jsp">Home</a></td>
      </tr>
      </table>

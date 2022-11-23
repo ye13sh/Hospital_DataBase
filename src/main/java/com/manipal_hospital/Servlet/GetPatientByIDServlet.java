@@ -24,10 +24,9 @@ public class GetPatientByIDServlet extends HttpServlet {
             int id=Integer.valueOf(req.getParameter("id"));
             PatientDTO patientDTO=service.getPatientByID(id);
             if(null !=patientDTO) {
-                req.setAttribute("patient", patientDTO);
+                req.setAttribute("patientDTO", patientDTO);
                 RequestDispatcher dispatcher = req.getRequestDispatcher("patient_details.jsp");
                 dispatcher.forward(req, resp);
-                //resp.sendRedirect("get_patient_by_id_success.jsp");
             }
             else {
                 resp.sendRedirect("patient_id_not_found.jsp");

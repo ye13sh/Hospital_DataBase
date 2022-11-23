@@ -24,12 +24,12 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>getDoctor</servlet-name>
+    <servlet-name>getDoctorByID</servlet-name>
     <servlet-class>com.manipal_hospital.Servlet.GetDoctorByIDServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>getDoctor</servlet-name>
-    <url-pattern>/getDoctor</url-pattern>
+    <servlet-name>getDoctorByID</servlet-name>
+    <url-pattern>/getDoctorByID</url-pattern>
   </servlet-mapping>
 
   <servlet>

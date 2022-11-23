@@ -18,8 +18,9 @@ public class GetDoctorByIDRepository {
         util=new ConnectionUtil();
     }
     //id,name,age,contact,mail,qualification,specialization,address
-    public DoctorDTO getDoctor(int id)throws DB_ERROR_Exception {
+    public DoctorDTO getDoctorBtID(int id)throws DB_ERROR_Exception {
        try {
+           System.out.println("request coming to repo");
            connection= util.getConnection();
            pstmt=connection.prepareStatement(QueryConstant.Get_Doctor_By_ID_query);
            pstmt.setInt(1,id);
@@ -36,10 +37,10 @@ public class GetDoctorByIDRepository {
                doctorDTO.setSpecialization(rs.getString("specialization"));
                doctorDTO.setAddress(rs.getString("address"));
                return doctorDTO;
-
            }
 
        }catch (Exception e){
+           System.out.println(e);
            throw new DB_ERROR_Exception("Error while connecting getDoctor repository",e);
        }finally {
            try{

@@ -20,6 +20,7 @@ public class InsertPatientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            //do not give id while inserting in servlet
             PatientDTO patientDTO=new PatientDTO();
             patientDTO.setName((String) req.getParameter("name"));
             patientDTO.setAge(Integer.valueOf(req.getParameter("age")));

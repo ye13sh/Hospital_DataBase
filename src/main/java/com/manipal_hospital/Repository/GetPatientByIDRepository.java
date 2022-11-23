@@ -20,6 +20,7 @@ public class GetPatientByIDRepository {
     //id,name,age,doctor_name,treatment,contact,address
     public PatientDTO getPatientByID(int id)throws DB_ERROR_Exception {
         try {
+            System.out.println("request repo");
             connection=util.getConnection();
             pstmt=connection.prepareStatement(QueryConstant.Get_Patient_By_ID_query);
             pstmt.setInt(1,id);

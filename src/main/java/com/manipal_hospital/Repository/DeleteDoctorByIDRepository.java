@@ -17,10 +17,12 @@ public class DeleteDoctorByIDRepository {
     }
     public void deleteDoctor(int id)throws DB_ERROR_Exception {
         try {
+            System.out.println("request came to repository");
             connection=util.getConnection();
             pstmt=connection.prepareStatement(QueryConstant.Delete_Doctor_query);
             pstmt.setInt(1,id);
             pstmt.executeUpdate();
+            System.out.println("successfully deleted");
 
         }catch (Exception e){
             throw new DB_ERROR_Exception("Error while connecting deleteDoctor repository",e);

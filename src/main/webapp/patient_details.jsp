@@ -12,37 +12,38 @@
      <tr>
       <h1>Get Patient By Using PatientId</h1>
        <table style="with: 80%">
+
          <td>Enter Patient ID</td>
-         <td><input type="text" name="id" value="${patient.id}" /></td>
+         <td><input type="text" name="id" value="${patientDTO.id}" /></td>
         </tr>
         <tr>
             <td>Patient Name</td>
-            <td><input type="text" name="name" value="${patient.name}" /></td>
+            <td><input type="text" name="name" value="${patientDTO.name}" /></td>
            </tr>
         <tr>
                <td>Age</td>
-               <td><input type="text" name="age" value="${patient.age}" /></td>
+               <td><input type="text" name="age" value="${patientDTO.age}" /></td>
                </tr>
          <tr>
              <td>Doctor Name</td>
-              <td><input type="text" name="doctor_name" value="${patient.doctor_name}" /></td>
+              <td><input type="text" name="doctor_name" value="${patientDTO.doctor_name}" /></td>
               </tr>
        <tr>
            <td>Treatment</td>
-           <td><input type="text" name="treatment" value="${patient.treatment}" /></td>
+           <td><input type="text" name="treatment" value="${patientDTO.treatment}" /></td>
             </tr>
        <tr>
               <td>Contact</td>
-              <td><input type="text" name="contact" value="${patient.contact}" /></td>
+              <td><input type="text" name="contact" value="${patientDTO.contact}" /></td>
                </tr>
        <tr>
               <td>Address</td>
-              <td><input type="text" name="address" value="${patient.address}" /></td>
+              <td><input type="text" name="address" value="${patientDTO.address}" /></td>
                </tr>
 
        <tr>
-       <td><a href="update_patient.jsp" style="margin-right: 30px">AUpdate Patient</a></td>
-       <td><a href="delete_patient.jsp">Delete Patient</a></td>
+       <td><a href="<%= request.getContextPath() %>/updatePatient?id=${patientDTO.id}">Update Patient</a></td>
+       <td><a href="<%= request.getContextPath() %>/deletePatient?id=${patientDTO.id}">Delete Patient</a></td>
        </tr>
 
        </table>

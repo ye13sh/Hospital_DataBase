@@ -12,6 +12,7 @@
  <tr>
   <h1>Get Patient By Using PatientId</h1>
    <table style="with: 80%">
+    <form action="<%= request.getContextPath() %>/getPatientByID?id=${id}" method="get">
      <td>Enter Patient ID</td>
      <td><input type="text" name="id" /></td>
     </tr>

@@ -22,10 +22,12 @@ public class DeleteDoctorByIDServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        try {
+           System.out.println("request came to servlet");
           int id=Integer.valueOf(req.getParameter("id"));
           service.deleteDoctor(id);
            resp.sendRedirect("delete_doctor_success.jsp");
        }catch (Exception e){
+           System.out.println(e);
            resp.sendRedirect("delete_doctor_failure.jsp");
        }
 

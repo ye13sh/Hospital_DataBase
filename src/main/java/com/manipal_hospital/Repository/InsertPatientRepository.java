@@ -22,6 +22,7 @@ public class InsertPatientRepository {
     //id,name,age,doctor_name,treatment,contact,address
     public void insertPatient(PatientDTO patientDTO)throws DB_ERROR_Exception {
         try {
+            System.out.println("received");
             connection = util.getConnection();
             pstmt = connection.prepareStatement(QueryConstant.Insert_patient_query);
             pstmt.setInt(1, getLastId()+1);

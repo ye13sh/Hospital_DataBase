@@ -20,8 +20,8 @@ public class InsertDoctorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            //do not give id while inserting in servlet
             DoctorDTO doctorDTO=new DoctorDTO();
-            doctorDTO.setId(Integer.valueOf(req.getParameter("id")));
             doctorDTO.setName((String) req.getParameter("name"));
             doctorDTO.setAge(Integer.valueOf(req.getParameter("age")));
             doctorDTO.setContact(Integer.valueOf(req.getParameter("contact")));
@@ -33,6 +33,7 @@ public class InsertDoctorServlet extends HttpServlet {
             service.insertDoctor(doctorDTO);
             resp.sendRedirect("insert_doctor_success.jsp");
         }catch (Exception e){
+            System.out.println(e);
             resp.sendRedirect("insert_doctor_failure.jsp");
         }
     }

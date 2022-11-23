@@ -12,6 +12,7 @@ public class InsertDoctorService {
     }
 
     public void insertDoctor(DoctorDTO doctorDTO)throws DB_ERROR_Exception {
+        System.out.println("req service");
         repository.insertDoctor(doctorDTO);
     }
 }

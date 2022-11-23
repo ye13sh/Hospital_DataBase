@@ -22,19 +22,21 @@ public class GetDoctorByIDServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try {
+            System.out.println("request coming to servlet");
             int id=Integer.valueOf(req.getParameter("id"));
-            DoctorDTO doctorDTO=service.getDoctor(id);
+            DoctorDTO doctorDTO=service.getDoctorByID(id);
             if(null !=doctorDTO) {
-                req.setAttribute("doctor", doctorDTO);
+                req.setAttribute("doctorDTO", doctorDTO);
                 RequestDispatcher dispatcher = req.getRequestDispatcher("doctor_details.jsp");
                 dispatcher.forward(req, resp);
-                //resp.sendRedirect("get_doctor_by_id_success.jsp");
+
             }
             else {
                 resp.sendRedirect("doctor_id_not_found.jsp");
             }
 
         }catch (Exception e){
+            System.out.println(e);
             resp.sendRedirect("get_doctor_by_id_failure.jsp");
         }
 

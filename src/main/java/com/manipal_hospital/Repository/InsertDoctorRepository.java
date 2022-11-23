@@ -21,6 +21,7 @@ public class InsertDoctorRepository {
     //id,name,age,contact,mail,qualification,specialization,address
     public void insertDoctor(DoctorDTO doctorDTO)throws DB_ERROR_Exception {
         try{
+            System.out.println("request coming to repo");
         connection= util.getConnection();
         pstmt=connection.prepareStatement(QueryConstant.Insert_Doctor_query);
         pstmt.setInt(1,getLastId()+1);
@@ -33,7 +34,9 @@ public class InsertDoctorRepository {
         pstmt.setString(8,doctorDTO.getAddress());
 
         pstmt.executeUpdate();
+            System.out.println("inserted success");
         }catch (Exception e){
+            System.out.println(e);
             throw new DB_ERROR_Exception("Error while connecting insertDoctor repository",e);
         }finally {
             try {

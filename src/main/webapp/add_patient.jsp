@@ -11,7 +11,7 @@
   <h1>Patient Details</h1>
   <form action="<%= request.getContextPath() %>/insertPatient" method="post">
    <table style="with: 80%">
-     <td>Student Name</td>
+     <td>Patient Name</td>
      <td><input type="text" name="name" /></td>
     </tr>
     <tr>

@@ -13,39 +13,39 @@
   <h1>Get Doctor By Using DoctorID</h1>
    <table style="with: 80%">
      <td>Enter Doctor ID</td>
-     <td><input type="text" name="id" value="${doctor.id}" /></td>
+     <td><input type="text" name="id" value="${doctorDTO.id}" /></td>
     </tr>
     <tr>
        <td>Doctor Name</td>
-       <td><input type="text" name="name" value="${doctor.name}" /></td>
+       <td><input type="text" name="name" value="${doctorDTO.name}" /></td>
        </tr>
     <tr>
         <td>Age</td>
-        <td><input type="text" name="age" value="${doctor.age}" /></td>
+        <td><input type="text" name="age" value="${doctorDTO.age}" /></td>
         </tr>
     <tr>
         <td>Contact</td>
-        <td><input type="text" name="contact" value="${doctor.contact}" /></td>
+        <td><input type="text" name="contact" value="${doctorDTO.contact}" /></td>
          </tr>
     <tr>
          <td>Mail</td>
-          <td><input type="text" name="mail" value="${doctor.mail}" /></td>
+          <td><input type="text" name="mail" value="${doctorDTO.mail}" /></td>
             </tr>
     <tr>
             <td>Qualification</td>
-            <td><input type="text" name="qualification" value="${doctor.qualification}" /></td>
+            <td><input type="text" name="qualification" value="${doctorDTO.qualification}" /></td>
             </tr>
     <tr>
             <td>Specialization</td>
-            <td><input type="text" name="specialization" value="${doctor.specialization}" /></td>
+            <td><input type="text" name="specialization" value="${doctorDTO.specialization}" /></td>
             </tr>
     <tr>
             <td>Address</td>
-            <td><input type="text" name="address" value="${doctor.address}" /></td>
+            <td><input type="text" name="address" value="${doctorDTO.address}" /></td>
             </tr>
     <tr>
     <td><a href="update_doctor.jsp" style="margin-right: 30px">Update Doctor</a></td>
-    <td><a href="delete_doctor.jsp">Delete Doctor</a></td>
+    <td><a href="<%= request.getContextPath() %>/deleteDoctor?id=${doctorDTO.id}">Delete Doctor</a></td>
     </tr>
 
    </table>
