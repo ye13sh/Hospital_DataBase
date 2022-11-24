@@ -32,6 +32,7 @@ public class UpdatePatientServlet extends HttpServlet {
             service.updatePatient(patientDTO);
             resp.sendRedirect("update_patient_success.jsp");
         }catch (Exception e){
+            System.out.println(e);
             resp.sendRedirect("update_patient_failure.jsp");
         }
     }

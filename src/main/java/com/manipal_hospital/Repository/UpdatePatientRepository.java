@@ -31,6 +31,7 @@ public class UpdatePatientRepository {
 
             pstmt.executeUpdate();
         }catch (Exception e){
+            System.out.println(e);
             throw new DB_ERROR_Exception("Error while connecting updatePatient repository",e);
         }finally {
            try {

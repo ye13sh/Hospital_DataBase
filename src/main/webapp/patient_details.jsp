@@ -14,6 +14,7 @@
        <table style="with: 80%">
 
          <td>Enter Patient ID</td>
+         <tr>
          <td><input type="text" name="id" value="${patientDTO.id}" /></td>
         </tr>
         <tr>
@@ -42,7 +43,7 @@
                </tr>
 
        <tr>
-       <td><a href="<%= request.getContextPath() %>/updatePatient?id=${patientDTO.id}">Update Patient</a></td>
+       <td><a href=<td><a href="update_patient.jsp" style="margin-right: 30px">Update Patient</a></td>
        <td><a href="<%= request.getContextPath() %>/deletePatient?id=${patientDTO.id}">Delete Patient</a></td>
        </tr>
 

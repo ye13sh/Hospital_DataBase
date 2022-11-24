@@ -13,6 +13,7 @@
   <h1>Get Doctor By Using DoctorID</h1>
    <table style="with: 80%">
      <td>Enter Doctor ID</td>
+     <tr>
      <td><input type="text" name="id" value="${doctorDTO.id}" /></td>
     </tr>
     <tr>
