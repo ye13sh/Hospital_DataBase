@@ -19,15 +19,17 @@ public class UpdatePatientRepository {
 
     public void updatePatient(PatientDTO patientDTO)throws DB_ERROR_Exception{
         try {
+            //id is down because in QueryConstant in PATIENT it is written in that way
+            //But in .jsp page and servlet class you can start writing from id
             connection= util.getConnection();
             pstmt=connection.prepareStatement(QueryConstant.Update_Patient_query);
-            pstmt.setInt(1,patientDTO.getId());
-            pstmt.setString(2, patientDTO.getName());
-            pstmt.setInt(3, patientDTO.getAge());
-            pstmt.setString(4, patientDTO.getDoctor_name());
-            pstmt.setString(5, patientDTO.getTreatment());
-            pstmt.setInt(6, patientDTO.getContact());
-            pstmt.setString(7, patientDTO.getAddress());
+            pstmt.setString(1, patientDTO.getName());
+            pstmt.setInt(2, patientDTO.getAge());
+            pstmt.setString(3, patientDTO.getDoctor_name());
+            pstmt.setString(4, patientDTO.getTreatment());
+            pstmt.setInt(5, patientDTO.getContact());
+            pstmt.setString(6, patientDTO.getAddress());
+            pstmt.setInt(7,patientDTO.getId());
 
             pstmt.executeUpdate();
         }catch (Exception e){
